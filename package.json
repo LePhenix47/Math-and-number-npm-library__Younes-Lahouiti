@@ -1,0 +1,31 @@
+{
+  "name": "@lephenix47/math-numbers",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "lib/es6/index.js",
+  "module": "lib/commonjs/index.js",
+  "types": "lib/es6/index.d.ts",
+  "scripts": {
+    "ts-cmd": "rmdir /s /q  lib && tsc && tsc --build tsconfig.es5.json",
+    "ts-bash": "rm -rf ./ lib && tsc && tsc --build tsconfig.es5.json",
+    "publish": "npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LePhenix47/[URL].git"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [],
+  "author": "Younes LAHOUITI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LePhenix47/[URL]/issues"
+  },
+  "homepage": "https://github.com/LePhenix47/[URL]#readme",
+  "devDependencies": {
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.1.3"
+  }
+}
