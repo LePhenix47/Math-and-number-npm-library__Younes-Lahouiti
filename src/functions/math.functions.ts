@@ -168,7 +168,7 @@ export function solveQuadratic(
    * @param {number} c - The constant term.
    * @returns {number} The value of the discriminant.
    */
-  function computeDiscriminant(a, b, c) {
+  function computeDiscriminant(a: number, b: number, c: number): number {
     return b ** 2 - 4 * a * c;
   }
 
