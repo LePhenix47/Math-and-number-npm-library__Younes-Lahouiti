@@ -158,9 +158,17 @@ export function solveQuadratic(
   b: number,
   c: number
 ): { x1: number; x2: number | null; areReal: boolean } {
-  const delta: number = getDelta(a, b, c);
+  const delta: number = computeDiscriminant(a, b, c);
 
-  function getDelta(a, b, c) {
+  /**
+   * Calculates the discriminant of the quadratic equation.
+   *
+   * @param {number} a - The coefficient of the quadratic term.
+   * @param {number} b - The coefficient of the linear term.
+   * @param {number} c - The constant term.
+   * @returns {number} The value of the discriminant.
+   */
+  function computeDiscriminant(a, b, c) {
     return b ** 2 - 4 * a * c;
   }
 
