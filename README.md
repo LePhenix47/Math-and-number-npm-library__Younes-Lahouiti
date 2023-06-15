@@ -1,8 +1,8 @@
-# @lephenix47/
+# @lephenix47/math-numbers
 
 ## Table of Contents
 
-- [@lephenix47/](#lephenix47)
+- [@lephenix47/math-numbers](#lephenix47math-numbers)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Usage](#usage)

@@ -1,3 +1,12 @@
-export {} from "./classes";
+export {
+  logarithm,
+  nthRoot,
+  factorial,
+  isPrime,
+} from "./functions/math.functions";
 
-export {} from "./variables";
+export {
+  getRandomNumber,
+  decimalToHexadecimal,
+  hexadecimalToDecimal,
+} from "./functions/number.functions";
