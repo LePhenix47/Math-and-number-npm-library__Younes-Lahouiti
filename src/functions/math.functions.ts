@@ -144,6 +144,25 @@ export function isPrime(number: number): boolean {
 }
 
 /**
+ * Solves a linear equation of the form ax + b = 0.
+ * @param {number} a - The coefficient of x.
+ * @param {number} b - The constant term.
+ * @returns {number} The solution for x.
+ */
+export function solveLinear(a: number, b: number): number {
+  //Error handling logic here
+  const argumentsAreInvalid: boolean = isNaN(a) || isNaN(b);
+  if (argumentsAreInvalid) {
+    throw new Error(
+      `Arguments are invalid, expected a number but instead got: ${typeof a} for a and ${typeof b} for b`
+    );
+  }
+
+  // ax + b = 0 equalts to x = -b/a
+  return -b / a;
+}
+
+/**
  * Solves a quadratic equation of the form `ax² + bx + c = 0`.
  *
  * @param {number} a - The coefficient of the quadratic term.
@@ -158,6 +177,15 @@ export function solveQuadratic(
   b: number,
   c: number
 ): { x1: number; x2: number | null; areReal: boolean } {
+  //Error handling logic here:
+  const argumentsAreInvalid: boolean = isNaN(a) || isNaN(b) || isNaN(c);
+  if (argumentsAreInvalid) {
+    throw new Error(
+      `Arguments are invalid, expected a number but instead got: ${typeof a} for a, ${typeof b} for b and ${typeof c} for c `
+    );
+  }
+
+  //We compute Δ = b² - 4ac
   const delta: number = computeDiscriminant(a, b, c);
 
   /**
@@ -172,6 +200,7 @@ export function solveQuadratic(
     return b ** 2 - 4 * a * c;
   }
 
+  //We will store the solutions inside this object
   const solutions: {
     x1: number;
     x2: number | null;
@@ -182,22 +211,17 @@ export function solveQuadratic(
     areReal: true,
   };
 
+  //If we have a null delta, we only have 1 solution
   const hasOneRealSolution: boolean = delta === 0;
   if (hasOneRealSolution) {
     solutions.x1 = -b / (2 * a);
   } else {
-    const solutions: {
-      x1: number;
-      x2: number | null;
-      areReal: boolean;
-    } = {
-      x1: NaN,
-      x2: NaN,
-      areReal: true,
-    };
+    //Otherwise they 2
     solutions.x1 = (-b + Math.sqrt(Math.abs(delta))) / (2 * a);
     solutions.x2 = (-b - Math.sqrt(Math.abs(delta))) / (2 * a);
 
+    //If Δ > 0 then we have 2 real solutions
+    //otherwise we have 2 complex solutions
     solutions.areReal = delta > 0;
   }
 

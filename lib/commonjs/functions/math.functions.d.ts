@@ -38,6 +38,13 @@ export declare function factorial(number: number): number;
  */
 export declare function isPrime(number: number): boolean;
 /**
+ * Solves a linear equation of the form ax + b = 0.
+ * @param {number} a - The coefficient of x.
+ * @param {number} b - The constant term.
+ * @returns {number} The solution for x.
+ */
+export declare function solveLinear(a: number, b: number): number;
+/**
  * Solves a quadratic equation of the form `ax² + bx + c = 0`.
  *
  * @param {number} a - The coefficient of the quadratic term.
