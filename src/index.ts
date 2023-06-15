@@ -3,6 +3,7 @@ export {
   nthRoot,
   factorial,
   isPrime,
+  solveQuadratic,
 } from "./functions/math.functions";
 
 export {

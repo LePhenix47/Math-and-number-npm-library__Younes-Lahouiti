@@ -143,7 +143,21 @@ export function isPrime(number: number): boolean {
   return true;
 }
 
-export function solveQuadratic(a, b, c) {
+/**
+ * Solves a quadratic equation of the form `ax² + bx + c = 0`.
+ *
+ * @param {number} a - The coefficient of the quadratic term.
+ * @param {number} b - The coefficient of the linear term.
+ * @param {number} c - The constant term.
+ *
+ * @returns {{x1: number, x2: number|null, areReal: boolean}} An object containing the solutions to the quadratic equation.
+ * The `x1` property represents the first solution, `x2` represents the second solution (if it exists), and `areReal` indicates if the solutions are real numbers.
+ */
+export function solveQuadratic(
+  a: number,
+  b: number,
+  c: number
+): { x1: number; x2: number | null; areReal: boolean } {
   const delta: number = getDelta(a, b, c);
 
   function getDelta(a, b, c) {
