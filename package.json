@@ -1,7 +1,7 @@
 {
   "name": "@lephenix47/math-numbers",
   "version": "1.0.0",
-  "description": "description",
+  "description": "A comprehensive JavaScript library for mathematical calculations and number operations. Perform common math operations, such as logarithm, nth root, factorial, and solving linear and quadratic equations. Convert between decimal and hexadecimal numbers and generate random numbers",
   "main": "lib/es6/index.js",
   "module": "lib/commonjs/index.js",
   "types": "lib/es6/index.d.ts",
