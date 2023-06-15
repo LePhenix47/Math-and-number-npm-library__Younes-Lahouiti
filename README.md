@@ -36,7 +36,7 @@ import {
 You can then use these imported functions to perform mathematical operations, handle numbers, and solve equations in your JavaScript code.
 
 ## Conclusion
-The @lephenix47/math-numbers library simplifies mathematical calculations and number manipulations in JavaScript, providing a set of convenient functions for your projects. It aims to enhance your productivity and make working with math and numbers easier.
+The `@lephenix47/math-numbers` library simplifies mathematical calculations and number manipulations in JavaScript, providing a set of convenient functions for your projects. It aims to enhance your productivity and make working with math and numbers easier.
 
 Feel free to explore the library's functions and integrate them into your applications to leverage their capabilities.
 
